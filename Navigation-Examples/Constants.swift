@@ -111,5 +111,12 @@ let listOfExamples: [NamedController] = [
         controller: LocationSnappingViewController.self,
         storyboard: nil,
         pushExampleToViewController: true
+    ),
+    (
+        name: "Custom route lines styling",
+        description: "Demonstrates how to provide cystom styling for route lines.",
+        controller: CustomRouteLinesViewController.self,
+        storyboard: nil,
+        pushExampleToViewController: true
     )
 ]

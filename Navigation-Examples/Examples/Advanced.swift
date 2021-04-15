@@ -45,13 +45,6 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
             $0.location.puckType = .puck2D()
         }
         
-        // TODO: Provide a reliable way of setting camera to current coordinate.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            if let coordinate = self.navigationMapView.mapView.locationManager.latestLocation?.coordinate {
-                self.navigationMapView.mapView.cameraManager.setCamera(centerCoordinate: coordinate, zoom: 13.0)
-            }
-        }
-        
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         navigationMapView.addGestureRecognizer(gesture)
         
