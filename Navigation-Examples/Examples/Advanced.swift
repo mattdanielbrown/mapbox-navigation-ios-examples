@@ -97,7 +97,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
     }
 
     func requestRoute(destination: CLLocationCoordinate2D) {
-        guard let userLocation = navigationMapView.mapView.locationManager.latestLocation else { return }
+        guard let userLocation = navigationMapView.mapView.location.latestLocation else { return }
         let userWaypoint = Waypoint(location: userLocation.internalLocation, heading: userLocation.heading, name: "user")
         let destinationWaypoint = Waypoint(coordinate: destination)
         let navigationRouteOptions = NavigationRouteOptions(waypoints: [userWaypoint, destinationWaypoint])

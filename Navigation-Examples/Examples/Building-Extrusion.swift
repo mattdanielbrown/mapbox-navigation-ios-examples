@@ -162,7 +162,7 @@ class BuildingExtrusionViewController: UIViewController, NavigationMapViewDelega
 
     func createWaypoints(for destinationCoordinate: CLLocationCoordinate2D?) {
         guard let destinationCoordinate = destinationCoordinate else { return }
-        guard let userLocation = navigationMapView.mapView.locationManager.latestLocation?.internalLocation else {
+        guard let userLocation = navigationMapView.mapView.location.latestLocation?.internalLocation else {
             presentAlert(message: "User location is not valid. Make sure to enable Location Services.")
             return
         }

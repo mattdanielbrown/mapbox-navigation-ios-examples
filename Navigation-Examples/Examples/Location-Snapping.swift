@@ -12,7 +12,7 @@ class LocationSnappingViewController: UIViewController {
         didSet {
             toggleButton.backgroundColor = isSnappingEnabled ? .blue : .darkGray
             let locationProvider: LocationProvider = isSnappingEnabled ? passiveLocationProvider : AppleLocationProvider()
-            navigationMapView.mapView.locationManager.overrideLocationProvider(with: locationProvider)
+            navigationMapView.mapView.location.overrideLocationProvider(with: locationProvider)
             passiveLocationProvider.startUpdatingLocation()
         }
     }

@@ -127,8 +127,15 @@ let listOfExamples: [NamedController] = [
         pushExampleToViewController: true
     ),
     (
+        name: "Observe electronic horizon events",
+        description: "Demonstrates how to use electronic horizon to predict user's most probable path and show upcoming intersections. Simulate Navigation option isn't supported here, instead you can simulate location in Xcode.",
+        controller: ObservingElectronicHorizonEventsViewController.self,
+        storyboard: nil,
+        pushExampleToViewController: true
+    ),
+    (
         name: "Route Lines Styling",
-        description: "Demonstrates how to provide cystom styling for route lines.",
+        description: "Demonstrates how to provide custom styling for route lines.",
         controller: CustomRouteLinesViewController.self,
         storyboard: nil,
         pushExampleToViewController: true
